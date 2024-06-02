@@ -42,5 +42,38 @@ class CompteEpargne(Compte):
             return "reussi avec succes"
         return "operation a echouer"
 
+# Méthode pour déposer de l'argent sur un compte
+    def deposer(self, montant):
+        print("vous ne pouvez pas deposer sur un compte epargne")
+
+
+# encapsulatiion
+class Compte(ABC):
+    def __init__(self, titulaire, solde=0):
+        self.__titulaire = titulaire  
+        self.__solde = solde 
+
+    def afficher_solde(self):
+        return self.__solde
+
+    def deposer(self, montant):
+        self.__solde =self.__solde + montant
+        return self.__solde
+# Utilisation de l'héritage, de la surcharge, du polymorphisme, de l'abstraction et de l'encapsulation
+compte1 = CompteCourant("Albert ", 1000)
+compte2 = CompteEpargne("ndaliko", 500)
+
+# albert dépose  sur son compte
+compte1.deposer(200)
+
+# ndaliko retire  sur son compte épargne
+compte2.retirer(100)
+
+# albert fait un virement à ndaliko
+compte1.virementSurCompte(300, compte2)
+
+# Affichage des soldes
+print(compte1.afficher_solde())  
+print(compte2.afficher_solde()) 
 
  
