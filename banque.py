@@ -23,6 +23,10 @@ class Compte(ABC):
         self._solde =self._solde + montant
         return self._solde
 
+# Méthode abstraite pour retirer de l'argent, à définir dans les sous-classes
+    @abstractmethod
+    def retirer(self, montant):
+        pass
 
 
  
