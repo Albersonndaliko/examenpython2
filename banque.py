@@ -42,5 +42,11 @@ class CompteEpargne(Compte):
             return "reussi avec succes"
         return "operation a echouer"
 
+# Méthode pour déposer de l'argent sur un compte
+    def deposer(self, montant):
+        print("vous ne pouvez pas deposer sur un compte epargne")
+
+
+
 
  
