@@ -41,6 +41,8 @@ class CompteEpargne(Compte):
             self._solde -= montant
             return "reussi avec succes"
         return "operation a echouer"
+    def deposer(self, montant):
+        print("deposez sur le compte principale")
 
 # Méthode pour déposer de l'argent sur un compte
     def deposer(self, montant):
