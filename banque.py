@@ -11,7 +11,7 @@ class Compte(ABC):
     def afficher_solde(self):
         return self.__solde
 
-  # Méthode pour effectuer un virement vers un autre compte 
+  # surcharge 
     def virementSurCompte(self, montant, autre_compte):
         if self.retirer(montant):
             autre__compte.deposer(montant)
